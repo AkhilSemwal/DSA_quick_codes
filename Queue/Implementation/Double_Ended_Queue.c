@@ -1,5 +1,6 @@
 #include<stdio.h>
 #define MAX 100
+
 void insertfront(int arr[],int *front,int *rear,int item){
     if(*front ==((*rear+1)%MAX)){
         printf("Overflow\n");
@@ -37,6 +38,38 @@ void insertraer(int arr[],int *front,int *rear,int item){
 }
 //Till here it is just the insert part.
 
+void deletefront(int arr[],int *front,int *rear){
+    if(*front == -1){
+        printf("Underflow\n");
+    }
+    else if(*front == *rear){
+        *front = *rear = -1;
+    }
+    else if(*front == MAX-1){
+        *front = 0;
+    }
+    else{
+        *front = *front+1;
+    }
+}
+
+void deleterear(int arr[],int *front,int *rear){
+    if(*front == -1){
+        printf("Underflow\n");
+    }
+    else if(*front == *rear){
+        *front = *rear = -1;
+    }
+    else if(*rear == 0){
+        *rear = MAX-1;
+    }
+    else{
+        *rear = *rear-1;
+    }
+}
+
+//Till here it is just the delete part.
+
 int display(int arr[],int *front,int *rear){
     if(*front ==((*rear+1)%MAX)){
         printf("Overflow1\n");
@@ -45,9 +78,6 @@ int display(int arr[],int *front,int *rear){
         printf("Queue is empty\n");
     }
     else if(*front == 0){
-        
-    }
-    else{
         int i = *front;
         while (i != *rear)
         {
@@ -59,6 +89,7 @@ int display(int arr[],int *front,int *rear){
     }
 }   
 int main(){
+
     int front = -1;
     int rear = -1;
     int arr[MAX];
@@ -71,3 +102,5 @@ int main(){
 
     return 0;
 }
+
+//won't work as the array is not defined so make that up first and then call the functions.

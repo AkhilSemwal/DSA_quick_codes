@@ -49,7 +49,7 @@ It can be useful for:
 The repository is organized topic-wise so that individual implementations can be easily found and practiced.
 
 ```text
-DSA_quick_codes/
+DSA-quick-codes/
 │
 ├── Arrays/
 ├── Strings/

@@ -10,6 +10,7 @@ int main() {
     struct Node* head = NULL;
     struct Node* temp = NULL;
 
+    //using array so it just work in real you would directly add it into the LL
     int arr[] = {1, 2, 3, 4, 5};
     int n = sizeof(arr) / sizeof(arr[0]);
 

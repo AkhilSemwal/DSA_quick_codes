@@ -8,7 +8,7 @@ int factorial(int n) {
 }
 
 int main() {
-    printf("=== Factorial (Recursion) ===\n");
+    printf(" Factorial :\n");
     
     for (int i = 0; i <= 6; i++) {
         printf("Factorial of %d: %d\n", i, factorial(i));
